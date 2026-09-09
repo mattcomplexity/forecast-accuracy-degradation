@@ -1,0 +1,32 @@
+# Copy this file to config.toml and edit as needed.
+# Any setting or section may be omitted to use the built-in default.
+
+[location]
+name = "Warsaw"
+timezone = "Europe/Warsaw"
+latitude = 52.2297
+longitude = 21.0122
+
+[api]
+url = "https://api.open-meteo.com/v1/forecast"
+timeout = 60
+max_retries = 2
+retry_base_delay = 53
+
+[storage]
+log_filepath = "logs/app.log"
+database_path = "data/weather_history.db"
+
+[weather]
+# Do not change this selection after collecting data in a database.
+# Variables must be a non-empty subset of the code-owned metadata keys.
+variables = [
+    "temperature_2m",
+    "relative_humidity_2m",
+    "apparent_temperature",
+    "precipitation_probability",
+    "cloud_cover",
+    "wind_speed_10m",
+    "wind_gusts_10m",
+    "precipitation",
+]

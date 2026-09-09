@@ -1,0 +1,22 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+.kilo/plans/
+.devcontainer/
+
+# IDE files
+.idea/
+
+# Generated output files
+logs/
+data/
+
+config.toml
+AGENTS.md

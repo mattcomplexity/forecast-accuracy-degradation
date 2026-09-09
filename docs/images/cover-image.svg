@@ -1,0 +1,98 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title description">
+  <title id="title">Forecast Accuracy Degradation</title>
+  <desc id="description">An automated pipeline from weather forecasts through collection, scheduling, and storage to an accuracy chart.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#071626"/>
+      <stop offset="1" stop-color="#102d42"/>
+    </linearGradient>
+    <linearGradient id="weatherGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#ffc857"/>
+      <stop offset="1" stop-color="#ff8c42"/>
+    </linearGradient>
+    <linearGradient id="chartLine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#57d3ff"/>
+      <stop offset="1" stop-color="#7cf2c5"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M 48 0 L 0 0 0 48" fill="none" stroke="#b9d6e5" stroke-opacity="0.055" stroke-width="1"/>
+    </pattern>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="14" stdDeviation="16" flood-color="#000b14" flood-opacity="0.32"/>
+    </filter>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="8" markerHeight="8" orient="auto-start-reverse">
+      <path d="M 0 0 L 10 5 L 0 10 z" fill="#58c7df"/>
+    </marker>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#background)"/>
+  <rect width="1600" height="900" fill="url(#grid)"/>
+  <circle cx="1460" cy="90" r="280" fill="#2b6b84" opacity="0.10"/>
+  <circle cx="120" cy="850" r="310" fill="#1694a6" opacity="0.08"/>
+
+  <g font-family="Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif">
+    <text x="100" y="86" fill="#76d6e8" font-size="22" font-weight="700" letter-spacing="4">AUTOMATED WEATHER DATA PIPELINE</text>
+    <text x="100" y="178" fill="#f4f8fa" font-size="85" font-weight="750">Forecast Accuracy Degradation</text>
+    <text x="102" y="241" fill="#a9c2cf" font-size="35">Collect continuously. Measure how forecast confidence changes with time.</text>
+
+    <path d="M 278 477 H 508 M 690 477 H 908 M 1078 477 H 1308" fill="none" stroke="#58c7df" stroke-width="4" stroke-linecap="round" marker-end="url(#arrow)"/>
+
+    <g transform="translate(110 355)" filter="url(#shadow)">
+      <rect width="168" height="244" rx="28" fill="#102f43" stroke="#2f6074" stroke-width="2"/>
+      <circle cx="112" cy="69" r="31" fill="url(#weatherGlow)"/>
+      <g stroke="#ffc857" stroke-width="5" stroke-linecap="round">
+        <path d="M112 25 V13 M112 125 V113 M68 69 H56 M168 69 H156 M81 38 L72 29 M152 109 L143 100 M143 38 L152 29"/>
+      </g>
+      <path d="M38 119 C38 97 56 82 76 85 C87 64 119 67 127 91 C149 91 158 106 158 122 C158 140 145 151 126 151 H65 C48 151 38 139 38 119 Z" fill="#edf8fc" stroke="#9dd9e8" stroke-width="3"/>
+      <text x="84" y="194" text-anchor="middle" fill="#f4f8fa" font-size="22" font-weight="700" letter-spacing="1.5">WEATHER</text>
+      <text x="84" y="224" text-anchor="middle" fill="#8eacbb" font-size="16">Open-Meteo</text>
+    </g>
+
+    <g transform="translate(510 355)" filter="url(#shadow)">
+      <rect width="180" height="244" rx="28" fill="#102f43" stroke="#2f6074" stroke-width="2"/>
+      <path d="M99 61 H143 L160 78 V140 H99 Z" fill="#eef7fa" stroke="#9dd9e8" stroke-width="3" stroke-linejoin="round"/>
+      <path d="M143 61 V78 H160" fill="#ccebf2" stroke="#9dd9e8" stroke-width="3" stroke-linejoin="round"/>
+      <g stroke="#258ca5" stroke-width="4" stroke-linecap="round">
+        <path d="M112 94 H146 M112 111 H146 M112 128 H137"/>
+      </g>
+      <circle cx="48" cy="101" r="38" fill="#eaf6f8" stroke="#7ad3df" stroke-width="4"/>
+      <g stroke="#327b8e" stroke-width="3" stroke-linecap="round">
+        <path d="M48 69 V75 M48 127 V133 M16 101 H22 M74 101 H80"/>
+      </g>
+      <path d="M48 101 L48 78 M48 101 L66 111" fill="none" stroke="#0f5368" stroke-width="5" stroke-linecap="round"/>
+      <circle cx="48" cy="101" r="5" fill="#ff9f43"/>
+      <text x="90" y="184" text-anchor="middle" fill="#f4f8fa" font-size="18" font-weight="700" letter-spacing="1">SCHEDULED</text>
+      <text x="90" y="206" text-anchor="middle" fill="#f4f8fa" font-size="18" font-weight="700" letter-spacing="1">COLLECTION</text>
+      <text x="90" y="231" text-anchor="middle" fill="#8eacbb" font-size="15">Python + cron</text>
+    </g>
+
+    <g transform="translate(910 355)" filter="url(#shadow)">
+      <rect width="168" height="244" rx="28" fill="#102f43" stroke="#2f6074" stroke-width="2"/>
+      <path d="M40 67 C40 50 60 40 84 40 C108 40 128 50 128 67 V137 C128 154 108 164 84 164 C60 164 40 154 40 137 Z" fill="#dff3f5" stroke="#69c6d4" stroke-width="3"/>
+      <ellipse cx="84" cy="67" rx="44" ry="27" fill="#f4fbfc" stroke="#69c6d4" stroke-width="3"/>
+      <path d="M40 101 C40 118 60 128 84 128 C108 128 128 118 128 101 M40 133 C40 150 60 160 84 160 C108 160 128 150 128 133" fill="none" stroke="#69c6d4" stroke-width="3"/>
+      <text x="84" y="194" text-anchor="middle" fill="#f4f8fa" font-size="22" font-weight="700" letter-spacing="1.5">STORE</text>
+      <text x="84" y="224" text-anchor="middle" fill="#8eacbb" font-size="16">SQLite history</text>
+    </g>
+
+    <g transform="translate(1310 355)" filter="url(#shadow)">
+      <rect width="180" height="244" rx="28" fill="#102f43" stroke="#2f6074" stroke-width="2"/>
+      <rect x="27" y="43" width="126" height="112" rx="9" fill="#092131" stroke="#79cfdf" stroke-width="3"/>
+      <g stroke="#8baab8" stroke-opacity="0.35" stroke-width="1">
+        <path d="M45 66 H137 M45 91 H137 M45 116 H137 M45 141 H137"/>
+      </g>
+      <polyline points="43,139 61,122 80,107 98,89 117,82 138,70" fill="none" stroke="url(#chartLine)" stroke-width="6" stroke-linecap="round" stroke-linejoin="round"/>
+      <g fill="#7cf2c5">
+        <circle cx="43" cy="139" r="5"/><circle cx="61" cy="122" r="5"/><circle cx="80" cy="107" r="5"/><circle cx="98" cy="89" r="5"/><circle cx="117" cy="82" r="5"/><circle cx="138" cy="70" r="5"/>
+      </g>
+      <text x="90" y="194" text-anchor="middle" fill="#f4f8fa" font-size="22" font-weight="700" letter-spacing="1.5">ANALYZE</text>
+      <text x="90" y="224" text-anchor="middle" fill="#8eacbb" font-size="16">RMSE dashboard</text>
+    </g>
+
+    <g transform="translate(100 708)">
+      <rect width="1390" height="1" fill="#7eb4c5" opacity="0.25"/>
+      <text x="0" y="65" fill="#d7e7ed" font-size="25" font-weight="600">From scheduled API calls to an interactive view of forecast accuracy.</text>
+      <text x="0" y="108" fill="#789cab" font-size="19" letter-spacing="1">PYTHON  /  OPEN-METEO  /  SQLITE  /  DASH  /  PLOTLY</text>
+    </g>
+  </g>
+</svg>
