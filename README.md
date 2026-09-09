@@ -1,5 +1,7 @@
 # Forecast Accuracy Degradation
 
+![Forecast Accuracy Degradation](docs/images/cover-image.png)
+
 Regularly collect weather forecasts from Open-Meteo in a SQLite database, then analyze how forecast accuracy changes with lead time. The analysis calculates RMSE and presents the results in an interactive Plotly Dash dashboard.
 
 Instead of collecting every forecast manually, configure one cron job and let the tool keep collecting data automatically.
