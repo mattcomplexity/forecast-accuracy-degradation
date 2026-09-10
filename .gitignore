@@ -21,3 +21,4 @@ data/
 local_files/
 config.toml
 AGENTS.md
+.kilo/agent-manager.json
