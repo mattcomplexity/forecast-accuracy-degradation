@@ -18,5 +18,6 @@ wheels/
 logs/
 data/
 
+local_files/
 config.toml
 AGENTS.md
